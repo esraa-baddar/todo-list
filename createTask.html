@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Task</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="createTask.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <!-- سهم رجوع -->
+      <a href="create.html" class="back-arrow">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+
+      <p id="create">Create Task</p>
+
+      <!-- أيقونة على اليمين -->
+      <i class="fa-solid fa-clock"></i>
+    </div>
+  </header>
+
+  <!-- الكليندر -->
+  <div class="calendar">
+    <div class="calendar-header">
+      <i id="prevMonth" class="fa-solid fa-chevron-left"></i>
+      <span id="monthName"></span>
+      <i id="nextMonth" class="fa-solid fa-chevron-right"></i>
+    </div>
+
+    <div class="calendar-weekdays">
+      <div>Sun</div><div>Mon</div><div>Tue</div>
+      <div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+    </div>
+
+    <div class="calendar-days"></div>
+  </div>
+
+  <!-- القسم اللي بيظهر فيه اسم القسم + أيقونته + السهم -->
+  <div id="selectedCategory" class="selected-category"></div>
+
+  <!-- فورم إضافة التاسك -->
+  <div class="task-form">
+    <input type="text" id="taskName" placeholder="Task Name" />
+    <textarea id="taskDesc" placeholder="Task Description..."></textarea>
+    <button id="createTaskBtn">Create Task</button>
+  </div>
+
+  <script src="createTask.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Montserrat:wght@600&family=Roboto:wght@700&family=Lato:wght@700&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="dashboard">
+    <!-- ===== Header (Menu bar) ===== -->
+    <header>
+      <div class="top-bar">
+        <div class="grid-icon">
+          <span></span><span></span>
+          <span></span><span></span>
+        </div>
+        <p id="date"></p>
+        <i class="fa-solid fa-clock"></i>
+      </div>
+
+      <div class="bottom-bar">
+        <div class="today-section">
+          <h3>Today</h3>
+          <p id="taskCount">0</p>
+        </div>
+        <button id="addBtn">Add New</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="container">
+    <!-- ===== Week Cards ===== -->
+    <div class="week-container" id="week"></div>
+  </div>
+
+  <div class="my-task"><p>My Tasks</p></div>
+
+  <!-- ===== Form for adding tasks ===== -->
+  <div class="task-form" id="taskForm" style="display:none;">
+    <input type="text" id="taskTime" placeholder="time">
+        <input type="text" id="taskDept" placeholder="category">
+
+    <input type="text" id="taskNote" placeholder="note">
+
+    <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:8px;">
+      <button id="saveTask" type="button">Save</button>
+      <button id="cancelTask" type="button">Cancel</button>
+    </div>
+  </div>
+ <script src="dashboard.js"></script>
+</body>
+</html>

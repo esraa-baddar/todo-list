@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Montserrat:wght@600&family=Roboto:wght@700&family=Lato:wght@700&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Welcome Back!</h2>
+    <div class="welcome-img">
+  <img src="images/singin1.png" alt="welcome image">
+</div>
+
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Sign In</button>
+      <a href="#" class="forgot">Forgot Password?</a>
+      <P id="error" style="color: red;display: none;">wrong username or password</P>
+
+    </form>
+
+    <p class="or">Or sign in with</p>
+
+    <div class="social-login">
+  <button class="social">
+    <img src="images/icons8-google-48.png" alt="google">
+  </button>
+  <button class="social">
+    <img src="images/icons8-facebook-48.png" alt="facebook">
+  </button>
+  <button class="social">
+    <img src="images/icons8-x-logo-50.png" alt="x">
+  </button>
+</div>
+
+
+
+    <p class="signup">
+      Don't have an account? <a href="signup.html">Sign Up</a>
+    </p>
+  </div>
+    <script src="main.js"></script>
+
+</body>
+</html>

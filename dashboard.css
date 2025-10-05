@@ -162,10 +162,10 @@ header {
   flex-direction: column;
   gap: 20px;
   background: #fff;
-  /*أبيضصافي*/border-radius: 25px;
-  /*cornersكبيرة*/padding: 30px 25px;
-  /*مساحةداخليةواسعة*/box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-   /* شادو ناعم */
+border-radius: 25px;
+ padding: 30px 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+   
 }
 
 /* ===== Individual Task ===== */
@@ -187,8 +187,8 @@ header {
 
 .task-item:hover {
   background: var(--primary);
-  /*✅الخلفيةتبقىباللونالأساسي*/color:white;
-  /*النصأبيضعشانيبان*/transform: translateY(-2px);
+ color:white;
+  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   -webkit-transform: translateY(-2px);
   -moz-transform: translateY(-2px);
@@ -216,7 +216,7 @@ header {
 .task-item {
   display: flex;
   justify-content: space-between;
-  /*يخليالمحتوىشمالوcheckboxيمين*/align-items: flex-start;
+ align-items: flex-start;
   padding: 10px;
   margin: 8px 0;
   background: #fff;
@@ -236,7 +236,7 @@ header {
 
 .task-main {
   display: flex;
-  gap: 12px; /* مسافة بين الوقت والقسم */
+  gap: 12px; 
   font-weight: 600;
   color: #333;
 }
@@ -255,7 +255,7 @@ header {
 .task-item {
   display: flex;
   justify-content: space-between;
-  /*المحتوىشمالوالـcheckboxيمين*/align-items: center;
+ align-items: center;
   padding: 12px;
   margin: 10px 0;
   background: var(--bg-light);
@@ -269,8 +269,8 @@ header {
 
 .task-main {
   display: flex;
-  align-items: flex-start; /* يخلي النصوص تبدأ من فوق */
-  gap: 150px; /* مسافة بين الوقت والقسم */
+  align-items: flex-start; 
+  gap: 150px;
 }
 
 .task-left {
@@ -298,7 +298,6 @@ header {
   color: #777;
   margin-top: 4px;
 }
-/* مثال لشاشات الموبايل */
 @media (max-width: 600px) {
   body {
     font-size: 16px;
@@ -318,3 +317,4 @@ header {
   flex-direction: column;
   gap: 10px;
 }
+

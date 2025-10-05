@@ -1,7 +1,4 @@
 
-// ====== عرض الأسبوع ======
-// ====== عرض الكليندر ======
-// ====== عرض الأسبوع ======
 const today = new Date();
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const weekContainer = document.getElementById("week");
@@ -27,11 +24,10 @@ if (weekContainer) {
   });
 }
 
-// ====== تحميل التاسكات من localStorage ======
+// ======  localStorage ======
 let storedTasks = JSON.parse(localStorage.getItem("tasks")) || {};
 const categories = ["Idea", "Food", "Work", "Sport", "Music"];
 
-// ====== تحديث عداد التاسكات ======
 function updateTaskCounts() {
   document.querySelector(".idea-count").textContent = `${(storedTasks.Idea || []).length} Tasks`;
   document.querySelector(".food-count").textContent = `${(storedTasks.Food || []).length} Tasks`;
@@ -41,7 +37,6 @@ function updateTaskCounts() {
 }
 updateTaskCounts();
 
-// ====== لما المستخدم يضغط على أي سهم ======
 const links = document.querySelectorAll(".activity-card a");
 
 links.forEach(link => {
@@ -52,11 +47,10 @@ links.forEach(link => {
     const category = card.querySelector("h3").textContent.trim();
     const icon = card.querySelector("i").classList.value;
 
-    // نخزن القسم المختار والايقونة
     localStorage.setItem("selectedCategory", category);
     localStorage.setItem("selectedIcon", icon);
 
-    // ننتقل للصفحة المطلوبة
     window.location.href = link.getAttribute("href");
   });
 });
+

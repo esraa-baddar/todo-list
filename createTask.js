@@ -1,5 +1,4 @@
-// ====== عرض الأسبوع ======
-// ====== التقويم الشهري ======
+
 const monthName = document.getElementById("monthName");
 const daysContainer = document.querySelector(".calendar-days");
 
@@ -19,14 +18,12 @@ function renderCalendar() {
 
   daysContainer.innerHTML = "";
 
-  // مسافات فاضية قبل أول يوم في الشهر
   for (let i = 0; i < startDay; i++) {
     const empty = document.createElement("div");
     empty.classList.add("empty");
     daysContainer.appendChild(empty);
   }
 
-  // عرض الأيام الفعلية
   for (let day = 1; day <= lastDay.getDate(); day++) {
     const dayEl = document.createElement("div");
     dayEl.textContent = day;
@@ -45,7 +42,6 @@ function renderCalendar() {
 
 renderCalendar();
 
-// ====== التنقل بين الشهور ======
 document.getElementById("prevMonth").addEventListener("click", () => {
   currentMonth--;
   if (currentMonth < 0) {
@@ -66,7 +62,6 @@ document.getElementById("nextMonth").addEventListener("click", () => {
   renderCalendar();
 });
 
-// ====== استرجاع بيانات القسم المختار ======
 const selectedCategory = document.getElementById("selectedCategory");
 const category = localStorage.getItem("selectedCategory");
 const icon = localStorage.getItem("selectedIcon");
@@ -79,7 +74,6 @@ if (category && icon) {
   `;
 }
 
-/// ====== إنشاء التاسك ======
 const taskNameInput = document.getElementById("taskName");
 const taskDescInput = document.getElementById("taskDesc");
 const createBtn = document.getElementById("createTaskBtn");
@@ -108,6 +102,6 @@ createBtn.addEventListener("click", () => {
   taskNameInput.value = "";
   taskDescInput.value = "";
   
-  // ✅ بعد الحفظ يرجعك تلقائيًا لصفحة create.html
   window.location.href = "create.html";
 });
+

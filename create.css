@@ -60,7 +60,7 @@ header {
   -o-border-radius: 3px;
 }
 #create {
-  font-size: 20px; /* أو أي حجم أكبر من الحالي */
+  font-size: 20px; 
   color: #333;
 }
 
@@ -128,12 +128,12 @@ header {
 }
 
 .activity-card:hover {
-  background: #e9d5ff; /* لون hover أغمق شوية */
+  background: #e9d5ff; 
 }
 
 .activity-card i {
   font-size: 22px;
-  color: var(--primary); /* بنفسجي أيقونات */
+  color: var(--primary); 
   margin-left: 15px;
 }
 
@@ -161,14 +161,14 @@ header {
   margin-right: 15px;
 }
 .activities-container {
-  position: relative; /* علشان نقدر نحط الزرار جواها بمكان ثابت */
+  position: relative; 
 }
 
 .add-floating {
   position: absolute;
   bottom: -20px;
-  /*نطلعهنصهفوقآخركارت*/right:  15px;
-  /*يبقىعلىالشمال*/width: 50px;
+  right:  15px;
+  width: 50px;
   height: 50px;
   border-radius: 30%;
   border: none;
@@ -195,3 +195,4 @@ header {
   flex-direction: column;
   gap: 10px;
 }
+

@@ -23,13 +23,12 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(() => errorEl.style.display = "none", 2500);
     }
   });})
-// حفظ المهمة
 localStorage.setItem("tasks", JSON.stringify(tasksArray));
 
-// استرجاع المهام عند فتح الصفحة
 let tasksArray = JSON.parse(localStorage.getItem("tasks")) || [];
 taskElement.addEventListener('click', () => {
   taskElement.classList.toggle('completed');
 });
+
 
 

@@ -1,5 +1,4 @@
 // ===== Date in Header =====
-// ===== Date in Header =====
 const months = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
@@ -8,7 +7,6 @@ const today = new Date();
 const day = today.getDate();
 const month = months[today.getMonth()];
 
-// الهيدر: يظهر الرقم + الشهر فقط
 document.getElementById("date").textContent = `${day} ${month}`;
 
 // ===== Week Cards =====
@@ -37,7 +35,6 @@ days.forEach((dayName, index) => {
 
 // ===== Tasks Logic =====
 document.addEventListener('DOMContentLoaded', () => {
-  // العناصر الأساسية
   const addBtn = document.getElementById("addBtn");
   const taskForm = document.getElementById("taskForm");
   const saveTask = document.getElementById("saveTask");
@@ -45,23 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const tasksContainer = document.getElementById("tasksContainer");
   const taskCount = document.getElementById("taskCount");
 
-  // دالة تحديث العداد
   function updateCount() {
     const activeTasks = tasksContainer.querySelectorAll(".task-item:not(.done)").length;
     taskCount.textContent = activeTasks;
   }
 
-  // فتح الفورم
   addBtn.addEventListener("click", () => {
     taskForm.style.display = "block";
   });
 
-  // إلغاء الفورم
   cancelTask.addEventListener("click", () => {
     taskForm.style.display = "none";
   });
 
-  // إضافة تاسك جديد
   saveTask.addEventListener("click", () => {
     const time = document.getElementById("taskTime").value.trim();
     const dept = document.getElementById("taskDept").value.trim();
@@ -72,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // إنشاء التاسك
     const taskDiv = document.createElement("div");
     taskDiv.className = "task-item";
 
@@ -99,19 +91,17 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         taskDiv.classList.remove("done");
       }
-      updateCount(); // ✅ تحديث العداد عند أي تغيير
+      updateCount(); 
     });
 
-    // إضافة التاسك للكونتينر
     tasksContainer.appendChild(taskDiv);
 
-    // تحديث العداد
     updateCount();
 
-    // تصفية الفورم
     document.getElementById("taskTime").value = "";
     document.getElementById("taskDept").value = "";
     document.getElementById("taskNote").value = "";
     taskForm.style.display = "none";
   });
 });
+

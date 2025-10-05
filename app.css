@@ -41,7 +41,7 @@ body{
 
 .welcome-img {
   display: flex;
-  justify-content: center; /* يحط الصورة في النص أفقياً */
+  justify-content: center; /
   margin-bottom: 1.5rem;   /* مسافة قبل الفورم */
 }
 
@@ -118,7 +118,6 @@ form button{
 p a{
     color: var(--primary);
 };
-/* مثال لشاشات الموبايل */
 @media (max-width: 600px) {
   body {
     font-size: 16px;
@@ -133,3 +132,4 @@ p a{
     margin-bottom: 5px;
   }
 }
+

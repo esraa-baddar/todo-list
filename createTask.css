@@ -138,7 +138,6 @@ header {
 .task-form button:hover {
   background: #7c28a2;
 }
-/* مثال لشاشات الموبايل */
 @media (max-width: 600px) {
   body {
     font-size: 16px;
@@ -158,3 +157,4 @@ header {
   flex-direction: column;
   gap: 10px;
 }
+
